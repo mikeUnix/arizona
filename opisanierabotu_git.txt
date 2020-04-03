@@ -1,0 +1,4 @@
+1 dobavlyaem izmeneniya    git add -A - vse izmeneniya
+2 commentiruem git commit -m " " -a----kajdij fail ili vse po otdelnosti
+3 dobavlyaem vse na github git push 
+kak to tak 
