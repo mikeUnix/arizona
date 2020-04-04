@@ -1,0 +1,14 @@
+{%extends 'Arizona/base_Arizona.html'%}
+
+{%block tittle%}
+Post list
+{%endblock%}
+
+{%block content%}
+{% for name in names%}
+<p>
+	{{name}}
+</p>
+{%endfor%}
+{%endblock%}
+
