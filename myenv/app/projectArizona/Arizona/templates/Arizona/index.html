@@ -5,11 +5,11 @@ Post list
 {%endblock%}
 
 {%block content%}
-<h1 class="mb-5">Cats in my house:</h1>
+<h1 class="mb-5">Posts:</h1>
 
-{% for name in names%}
+{% for post in posts%}
 <p>
-	{{name}}
+	{{post.title}}
 </p>
 {%endfor%}
 {%endblock%}
