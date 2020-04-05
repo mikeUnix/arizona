@@ -1,18 +1,15 @@
 {%extends 'Arizona/base_Arizona.html'%}
 
 {%block tittle%}
-Post list
+Posts list
 {%endblock%}
 
 {%block content%}
 <h1 class="mb-5">Posts:</h1>
-
 {% for post in posts%}
-
-
-<div class="card">
+<div class="card mb-4">
   <div class="card-header">
-    {{post.data_pub}}
+    {{post.date_pub}}
   </div>
   <div class="card-body">
     <h5 class="card-title">{{post.title}}</h5>
@@ -20,9 +17,7 @@ Post list
     <a href="#" class="btn btn-light">Read</a>
   </div>
 </div>
-<p>
-	{{post.title}}
-</p>
+
 {%endfor%}
 {%endblock%}
 
