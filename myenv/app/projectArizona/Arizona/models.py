@@ -6,7 +6,7 @@ class Post(models.Model):
 	title = models.CharField(max_length=150, db_index=True)
 	slug = models.SlugField(max_length=150, unique=True)
 	body = models.TextField(blank=True, db_index=True)
-	tags = models.ManyToManyField('Tag', blank=True, related_name='posts')
+	tags = models.ManyToManyField('Tag', blank=True, related_name='posts')####This
 	date_pub = models.DateTimeField(auto_now_add=True)
 
 	def get_absolute_url(self):
