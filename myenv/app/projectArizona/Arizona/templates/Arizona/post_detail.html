@@ -1,17 +1,15 @@
-{% extends 'Arizona/baze_Arizona.html'%}
-
+{% extends 'Arizona/base_Arizona.html'%}
 
 {%block title%}
 {{post.title}} - {{block.super}}
 {%endblock%}
 
 {%block content%}
-<h1 class=mt-5>
-	
-	{{post.title}}
-	<p>
-		
-		{{post.body}}
-	</p>>
-</h1>>
-{endblock}
+	<h1 class="mt-5">
+		{{post.title}}
+	</h1>
+
+<p>
+	{{post.body}}
+</p>
+{%endblock%}
