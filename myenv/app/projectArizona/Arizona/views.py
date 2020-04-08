@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.shortcuts import get_object_or_404
 from django.views.generic import View
 from .models import Post, Tag
 
@@ -22,13 +23,15 @@ def tags_list(request):
 #	return render(request, 'Arizona/tag_detail.html', context={'tag':tag})
 
 class PostDetail(View):
-	def get(self,reqest,slug):
-		post = Post.objects.get(slug__iexact=slug)
+	def get(self,request,slug):
+		#post = Post.objects.get(slug__iexact=slug)
+		post = get_object_or_404(Post, slug__iexact=slug)
 		return render(request, 'Arizona/post_detail.html',context={'post':post})
 
 class TagDetail(View):
 	def get(self,request,slug):
-		tag = Tag.objects.get(slug__iexact=slug)
+		#tag = Tag.objects.get(slug__iexact=slug)
+		tag = get_object_or_404(Tag, slug__iexact=slug)
 		return render(request, 'Arizona/tag_detail.html', context={'tag':tag})
 
 
