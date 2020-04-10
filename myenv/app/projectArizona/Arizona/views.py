@@ -5,6 +5,7 @@ from .models import Post, Tag
 from .utils import ObjectDetailMixin
 from .forms import TagForm 
 
+
 # Create your views here.
 
 def posts_list(request):

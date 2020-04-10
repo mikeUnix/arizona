@@ -1,6 +1,6 @@
 from django import forms
 from .models import Tag
-from django.core.exception import ValidationError#exception
+from django.core.exceptions import ValidationError
 
 
 """пользовательский класс для создания удаления редактирования постов связывается с базой данных"""
@@ -13,7 +13,8 @@ class TagForm(forms.Form):
 
 		if  new_slug == 'create':
 			raise ValidationError('Slug may not to be "Create"')
-			return new_slug
+
+		return new_slug
 
 
 
