@@ -15,7 +15,7 @@ class TagForm(forms.ModelForm):
 		model = Tag
 		fields = ['title', 'slug']
 		widgets = {'title': forms.TextInput(attrs={'class':'form-control'}),
-		'slug ': forms.TextInput(attrs={'class':'form-control'})
+		'slug': forms.TextInput(attrs={'class':'form-control'})
 
 		}
 
