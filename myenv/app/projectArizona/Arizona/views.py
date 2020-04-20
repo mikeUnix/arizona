@@ -30,7 +30,7 @@ class PostCreate(ObjectCreateMixin,View):
 class PostUpdate(ObjectUpdateMixin, View):
 	model = Post
 	model_form = PostForm
-	template = 'Arizona/post_delete_form.html'
+	template = 'Arizona/post_update_form.html'
 
 class PostDelete(ObjectDeleteMixin, View):
 	model = Post
