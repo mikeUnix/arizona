@@ -47,10 +47,15 @@ There is no any content for you
 
 </div>
 </div>
+
+{% if request.user.is_authenticated and request.user.is_staff %}
 <div class="admin-panel align-items-center">
   <a href="/admin" class="btn btn-success" >Admin</a> 
   {% block admin-panel %}{% endblock %}
 </div>
+
+{% endif %}
+
 
 </body>
 </html>

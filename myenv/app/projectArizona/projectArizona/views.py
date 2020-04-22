@@ -1,9 +1,7 @@
 from django.http import HttpResponse 
+from django.shortcuts import redirect
 
-
-
-def exampleFunction(request):
-
-	return HttpResponse('<h1> Zagolodok1 </h1>')
+def redirect_Arizona(request):
+	return redirect('posts_list_url', permanent=True)
 
 	

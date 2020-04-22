@@ -16,10 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls import include
-
+from .views import redirect_Arizona
 #from .views import exampleFunction
 
 urlpatterns = [
+
+    path('', redirect_Arizona),
     path('admin/', admin.site.urls),
+
     path('Arizona/', include('Arizona.urls'))
 ]
